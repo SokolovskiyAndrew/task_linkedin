@@ -1,0 +1,158 @@
+.header {
+    position: relative;
+
+    &-block {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-icons {
+        position: absolute;
+        bottom: 86px;
+        left: 86px;
+        display: flex;
+        flex-direction: column;
+        height: 160px;
+        justify-content: space-between;
+
+        .fab {
+            color: $black;
+            font-size: 14px;
+        }
+    }
+
+    &-text {
+        padding-bottom: 217px;
+
+        .title {
+            margin: 242px 220px 0 0;
+            padding: 20px 0;
+            font-family: $font-poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 96px;
+            text-transform: uppercase;
+            color: $black;
+        }
+
+        hr {
+            margin-bottom: 50px;
+            width: 116px;
+            height: 3px;
+            border: none;
+            background-color: $black;
+        }
+
+        .description {
+            max-width: 474px;
+            width: 100%;
+            font-family: Cabin;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 22px;
+            color: $grey-text;
+            line-height: 150%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+
+        .button {
+            margin-right: 24px;
+        }
+    }
+}
+
+.main-plate {
+    position: absolute;
+    z-index: -1000;
+    left: 7%;
+    top: -5%;
+    bottom: -2%;
+    width: 1079px;
+    height: 1051px;
+    background-color: $white-darken;
+    border-radius: 50%;
+
+    .plate {
+        position: relative;
+        top: 5%;
+
+        img {}
+
+        .ellipse {
+            display: block;
+            position: absolute;
+            z-index: -900;
+            border: 1px solid $yellow-light;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background-color: transparent;
+
+            &-image {
+                position: absolute;
+                left: 10%;
+                top: 85%;
+                max-width: 638px;
+                width: 100%;
+            }
+
+            &-big {
+                width: 1083px;
+                height: 1083px;
+                left: -5%;
+                top: 0;
+            }
+
+            &-small {
+                width: 801px;
+                height: 801px;
+                left: 7%;
+                top: -55%;
+            }
+        }
+    }
+}
+
+.navbar {
+    padding: 32px 56px 0;
+
+    &-brand {
+        font-family: $font-poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 72px;
+    }
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 233px;
+        width: 100%;
+        margin-right: 70px;
+
+        .nav-item {
+            .nav-link {
+                font-family: $font-cabin;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+                color: $black;
+            }
+        }
+    }
+
+    &-collapse {
+        justify-content: flex-end;
+
+        i {
+            font-size: 14px;
+            color: $black;
+            margin-left: 40px;
+        }
+    }
+}
