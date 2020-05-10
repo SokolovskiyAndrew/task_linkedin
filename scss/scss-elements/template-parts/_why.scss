@@ -1,4 +1,6 @@
-.section-head {}
+// .section-head {
+//     width: ;
+// }
 
 .section-title {
     @include section-title;
@@ -6,10 +8,9 @@
     text-align: center;
 }
 
-.section-hr {
-    @include section-hr;
-    margin: auto;
-}
+// .section-hr {
+//     @include section-hr;
+// }
 
 .why {
     padding: 5px 0;
