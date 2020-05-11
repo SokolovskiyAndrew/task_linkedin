@@ -19,11 +19,10 @@
     background: $yellow;
     border-radius: 25px;
     padding: 11px 21px;
-    font-family: Poppins;
+    font-family: $font-poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 21px;
     text-align: center;
     letter-spacing: 0.03em;
     color: $black;
@@ -31,6 +30,7 @@
 
 @mixin section-title {
     position: relative;
+    display: inline-block;
     font-family: $font-poppins;
     font-style: normal;
     font-weight: 600;

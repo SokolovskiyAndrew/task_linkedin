@@ -59,9 +59,9 @@ img {
       color: #282630;
       font-size: 14px; }
   .header-text {
-    padding-bottom: 217px; }
+    padding-bottom: 217px;
+    margin-left: 190px; }
     .header-text .title {
-      margin: 242px 220px 0 0;
       padding: 20px 0;
       font-family: "Poppins", sans-serif;
       font-style: normal;
@@ -90,43 +90,67 @@ img {
     .header-buttons .button {
       margin-right: 24px; }
 
-.main-plate {
+.header-block {
+  width: 100%;
+  justify-content: center; }
+
+.tray {
   position: absolute;
   z-index: -1000;
+  display: block;
   left: 7%;
-  top: -5%;
-  bottom: -2%;
+  top: -10%;
   width: 1079px;
   height: 1051px;
   background-color: #FAFAFA;
   border-radius: 50%; }
-  .main-plate .plate {
-    position: relative;
-    top: 5%; }
-    .main-plate .plate .ellipse {
-      display: block;
-      position: absolute;
-      z-index: -900;
-      border: 1px solid #FEE382;
-      border-radius: 50%;
-      box-sizing: border-box;
-      background-color: transparent; }
-      .main-plate .plate .ellipse-image {
-        position: absolute;
-        left: 10%;
-        top: 85%;
-        max-width: 638px;
-        width: 100%; }
-      .main-plate .plate .ellipse-big {
-        width: 1083px;
-        height: 1083px;
-        left: -5%;
-        top: 0; }
-      .main-plate .plate .ellipse-small {
-        width: 801px;
-        height: 801px;
-        left: 7%;
-        top: -55%; }
+
+.plate-dish {
+  position: relative;
+  display: block;
+  background-size: cover;
+  border-radius: 50%;
+  width: 638px;
+  height: 638px;
+  border: 1px solid #FEE382; }
+  .plate-dish .plate-info {
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    right: 0;
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    background-color: #FFDD63;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .plate-dish .plate-info div {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.03em;
+      color: #65636A; }
+  .plate-dish .ellipse {
+    display: block;
+    position: absolute;
+    z-index: -900;
+    border: 1px solid #FEE382;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: transparent; }
+    .plate-dish .ellipse-big {
+      width: 1083px;
+      height: 1083px;
+      left: -23%;
+      top: -27%; }
+    .plate-dish .ellipse-small {
+      width: 801px;
+      height: 801px;
+      left: 13%;
+      top: 2%; }
 
 .navbar {
   padding: 32px 56px 0; }
@@ -156,8 +180,135 @@ img {
       color: #282630;
       margin-left: 40px; }
 
+.dish {
+  position: relative; }
+  .dish .overlay-rectangle {
+    position: absolute;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: #e5e5e5; }
+  .dish .section-title_right {
+    float: right; }
+  .dish .main-dish {
+    position: relative;
+    margin: 50px 0 60px; }
+    .dish .main-dish .dish-img {
+      width: 555px;
+      height: 560px; }
+      .dish .main-dish .dish-img img {
+        width: 100%;
+        object-fit: cover; }
+    .dish .main-dish .dish-circle {
+      position: absolute;
+      z-index: -100;
+      left: 0;
+      top: 0;
+      width: 110px;
+      height: 110px;
+      border: 1px solid red;
+      border-radius: 50%;
+      background: #FFDD63;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .dish .main-dish .dish-circle .weight {
+        padding-bottom: 5px;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #65636A;
+        border-bottom: 1px solid white; }
+      .dish .main-dish .dish-circle .price {
+        padding-top: 5px;
+        font-family: "Cabin", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: #282630; }
+  .dish .dish-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    margin: auto; }
+    .dish .dish-info .name {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 54px;
+      text-align: center;
+      color: #282630; }
+    .dish .dish-info .description {
+      font-family: "Cabin", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 150%;
+      color: #65636A;
+      padding-bottom: 32px; }
+    .dish .dish-info .dish-buttons {
+      display: flex;
+      max-width: 350px;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .dish .dish-info .dish-buttons div {
+        margin-right: 24px; }
+  .dish .item-list .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .dish .item-list .item-img {
+      width: 260px;
+      height: 260px; }
+      .dish .item-list .item-img img {
+        width: 100%;
+        object-fit: cover; }
+    .dish .item-list .item-info {
+      max-width: 178px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .dish .item-list .item-info .name {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        text-align: center;
+        color: #282630; }
+      .dish .item-list .item-info .price {
+        font-family: "Cabin", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #282630;
+        margin: 8px 0 28px; }
+        .dish .item-list .item-info .price span {
+          color: #65636A; }
+      .dish .item-list .item-info .description {
+        display: none; }
+
+.section-head {
+  text-align: center; }
+
 .section-title {
   position: relative;
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -208,6 +359,7 @@ img {
     background-color: #FAFAFA; }
 
 .sl {
+  margin-top: 88px;
   width: 100%;
   display: flex;
   justify-content: center;
