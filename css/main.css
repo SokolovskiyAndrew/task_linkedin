@@ -152,6 +152,24 @@ img {
       left: 13%;
       top: 2%; }
 
+.move-down {
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  display: block;
+  background: #fafafa;
+  color: #8B8A91;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 94px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .move-down i {
+    cursor: pointer;
+    font-size: 22px; }
+
 .navbar {
   padding: 32px 56px 0; }
   .navbar-brand {
@@ -191,13 +209,16 @@ img {
     height: 400px;
     background-color: #e5e5e5; }
   .dish .section-title_right {
-    float: right; }
+    margin-top: 0;
+    padding-top: 96px; }
   .dish .main-dish {
     position: relative;
-    margin: 50px 0 60px; }
+    margin: 50px 0 60px;
+    max-width: 700px; }
     .dish .main-dish .dish-img {
-      width: 555px;
-      height: 560px; }
+      position: relative;
+      max-width: 555px;
+      height: 555px; }
       .dish .main-dish .dish-img img {
         width: 100%;
         object-fit: cover; }
@@ -265,43 +286,51 @@ img {
       justify-content: center; }
       .dish .dish-info .dish-buttons div {
         margin-right: 24px; }
-  .dish .item-list .item {
+  .dish .item-list {
+    padding-top: 48px;
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .dish .item-list .item-img {
-      width: 260px;
-      height: 260px; }
-      .dish .item-list .item-img img {
-        width: 100%;
-        object-fit: cover; }
-    .dish .item-list .item-info {
-      max-width: 178px;
-      width: 100%;
+    flex-wrap: wrap;
+    max-width: 1200px; }
+    .dish .item-list .item {
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .dish .item-list .item-info .name {
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 33px;
-        text-align: center;
-        color: #282630; }
-      .dish .item-list .item-info .price {
-        font-family: "Cabin", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-        text-align: center;
-        color: #282630;
-        margin: 8px 0 28px; }
-        .dish .item-list .item-info .price span {
-          color: #65636A; }
-      .dish .item-list .item-info .description {
-        display: none; }
+      align-items: center;
+      margin-bottom: 50px; }
+      .dish .item-list .item:nth-child(2) {
+        padding-top: 90px; }
+      .dish .item-list .item-img {
+        width: 260px;
+        height: 260px; }
+        .dish .item-list .item-img img {
+          width: 100%;
+          object-fit: cover; }
+      .dish .item-list .item-info {
+        max-width: 178px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .dish .item-list .item-info .name {
+          font-family: "Poppins", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 33px;
+          text-align: center;
+          color: #282630; }
+        .dish .item-list .item-info .price {
+          font-family: "Cabin", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: center;
+          color: #282630;
+          margin: 8px 0 28px; }
+          .dish .item-list .item-info .price span {
+            color: #65636A; }
+        .dish .item-list .item-info .description {
+          display: none; }
 
 .section-head {
   text-align: center; }
@@ -316,6 +345,7 @@ img {
   text-transform: uppercase;
   color: #282630;
   line-height: 72px;
+  padding-bottom: 19px;
   margin-top: 48px;
   text-align: center; }
   .section-title::after {

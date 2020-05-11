@@ -26,6 +26,7 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $black;
+    cursor: pointer;
 }
 
 @mixin section-title {
@@ -38,6 +39,7 @@
     text-transform: uppercase;
     color: $black;
     line-height: 72px;
+    padding-bottom: 19px;
 
     &::after {
         content: '';
