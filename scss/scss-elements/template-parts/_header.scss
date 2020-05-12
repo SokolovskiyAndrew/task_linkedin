@@ -104,6 +104,7 @@
     width: 638px;
     height: 638px;
     border: 1px solid $yellow-light;
+    padding: 50px 50px;
 
     // &::after {
     //     content: '';
@@ -120,20 +121,20 @@
 
 
 
-    // &::after {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     z-index: -900;
-    //     border: 1px solid $yellow-light;
-    //     border-radius: 50%;
-    //     box-sizing: border-box;
-    //     background-color: transparent;
-    //     width: 801px;
-    //     height: 801px;
-    //     left: 13%;
-    //     top: 2%;
-    // }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -900;
+        border: 1px solid $yellow-light;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: transparent;
+        width: 801px;
+        height: 801px;
+        left: 13%;
+        top: 2%;
+    }
 
     .plate-info {
         position: absolute;
@@ -215,6 +216,7 @@
 
 .navbar {
     padding: 32px 56px 0;
+    transition: 0.4s;
 
     &-brand {
         font-family: $font-poppins;
@@ -239,7 +241,13 @@
                 font-size: 14px;
                 line-height: 150%;
                 color: $black;
+
+                &:hover {
+                    border-bottom: 1px solid $black;
+                }
             }
+
+
         }
     }
 
@@ -252,4 +260,20 @@
             margin-left: 40px;
         }
     }
+}
+
+.black {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    background-color: #fafafab4;
+    padding-top: 0;
+}
+
+.ourOrders {
+    width: 100vw;
+    height: 100vh;
+    background-color: burlywood;
 }

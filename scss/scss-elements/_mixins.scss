@@ -1,33 +1,28 @@
-@mixin section-title {
-    font-family: $font-poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    text-transform: uppercase;
-    line-height: 72px;
-    color: $black;
-}
-
-// @mixin section-hr {
-//     width: 64px;
-//     height: 3px;
-//     border: none;
-//     background-color: $black;
+// @mixin section-title {
+//     font-family: $font-poppins;
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 48px;
+//     text-transform: uppercase;
+//     line-height: 72px;
+//     color: $black;
 // }
 
-@mixin button {
-    background: $yellow;
-    border-radius: 25px;
-    padding: 11px 21px;
-    font-family: $font-poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $black;
-    cursor: pointer;
-}
+// @mixin button {
+//     background: $yellow;
+//     border-radius: 25px;
+//     padding: 11px 21px;
+//     font-family: $font-poppins;
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 14px;
+//     text-align: center;
+//     letter-spacing: 0.03em;
+//     color: $black;
+//     border: none;
+//     outline: none;
+//     cursor: pointer;
+// }
 
 @mixin section-title {
     position: relative;
