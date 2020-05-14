@@ -1,14 +1,20 @@
 .header {
     position: relative;
+    width: 100%;
 
     &-block {
+        position: relative;
         display: flex;
-        justify-content: flex-end;
+        flex-flow: row wrap-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 100px 0;
     }
 
     &-icons {
         position: absolute;
-        bottom: 86px;
+        bottom: 30px;
         left: 86px;
         display: flex;
         flex-direction: column;
@@ -22,11 +28,13 @@
     }
 
     &-text {
-        padding-bottom: 217px;
-        margin-left: 190px;
+        max-width: 610px;
+        width: 100%;
+        z-index: 1;
+        padding: 0 10px;
 
         .title {
-            // margin: 242px 220px 0 0;
+            margin-bottom: 10px;
             padding: 20px 0;
             font-family: $font-poppins;
             font-style: normal;
@@ -66,136 +74,129 @@
     }
 }
 
-// .main-plate {
-//     position: absolute;
-//     z-index: -1000;
-//     left: 7%;
-//     top: -5%;
-//     bottom: -2%;
-//     width: 1079px;
-//     height: 1051px;
-//     background-color: $white-darken;
-//     border-radius: 50%;
-.header-block {
-    width: 100%;
-    justify-content: center;
-
-}
-
-.tray {
-    position: absolute;
-    z-index: -1000;
-    display: block;
-    left: 7%;
-    top: -10%;
-    width: 1079px;
-    height: 1051px;
-    background-color: $white-darken;
-    border-radius: 50%;
-}
-
-.plate-dish {
+.plate__dish {
     position: relative;
-    // z-index: 1000;
-    // margin-top: 100px;
-    display: block;
-    background-size: cover;
-    border-radius: 50%;
-    width: 638px;
-    height: 638px;
-    border: 1px solid $yellow-light;
-    padding: 50px 50px;
+    z-index: -10;
+    max-width: 839px;
+    width: 100%;
+    height: 635px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     z-index: -1000;
-    //     display: block;
-    //     left: 7%;
-    //     top: -10%;
-    //     width: 1079px;
-    //     height: 1051px;
-    //     background-color: $white-darken;
-    //     border-radius: 50%;
-    // }
+    .main__plate {
+        width: 100%;
+        height: 100%;
+        max-height: 635px;
+        background: center no-repeat;
+        background-size: contain;
 
-
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: -900;
-        border: 1px solid $yellow-light;
-        border-radius: 50%;
-        box-sizing: border-box;
-        background-color: transparent;
-        width: 801px;
-        height: 801px;
-        left: 13%;
-        top: 2%;
-    }
-
-    .plate-info {
-        position: absolute;
-        z-index: -100;
-        top: 0;
-        right: 0;
-        width: 94px;
-        height: 94px;
-        border-radius: 50%;
-        background-color: $yellow;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        div {
-            font-family: $font-poppins;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 21px;
-            letter-spacing: 0.03em;
-            color: $grey-text;
-        }
-    }
-
-    .ellipse {
-        display: block;
-        position: absolute;
-        z-index: -900;
-        border: 1px solid $yellow-light;
-        border-radius: 50%;
-        box-sizing: border-box;
-        background-color: transparent;
-
-        // &-image {
-        //     position: absolute;
-        //     left: 10%;
-        //     top: 85%;
-        //     max-width: 638px;
-        //     width: 100%;
-        // }
-
-        &-big {
-            width: 1083px;
-            height: 1083px;
-            left: -23%;
-            top: -27%;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -55%);
+            display: block;
+            width: 1079px;
+            height: 1051px;
+            border-radius: 50%;
+            background-color: $white-darken;
         }
 
-        &-small {
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-52%, -52%);
+            display: block;
             width: 801px;
             height: 801px;
-            left: 13%;
-            top: 2%;
+            border-radius: 50%;
+            border: 1px solid $yellow-light;
+        }
+
+        .tomato-first {
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            width: 801px;
+            height: 801px;
+            z-index: 1;
+
+            &::before {
+                content: '480 kkal';
+                position: absolute;
+                width: 94px;
+                height: 94px;
+                border-radius: 50%;
+                background-color: $yellow-light;
+                top: 6%;
+                right: 6%;
+                transform: translate(-50%, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $font-poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: 0.03em;
+                color: #65636A;
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 126px;
+                height: 122px;
+                background: url('../images/dishes/tomato_1.png') center no-repeat;
+                background-size: contain;
+                right: 0;
+                bottom: 30%;
+                transform: translate(50%, 0);
+            }
+        }
+
+        .tomato-second {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-52%, -52%);
+            border-radius: 50%;
+            width: 1083px;
+            height: 1083px;
+            z-index: 1;
+            border: 1px solid $yellow-light;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 126px;
+                height: 122px;
+                background: url('../images/dishes/tomato_2.png') center no-repeat;
+                background-size: contain;
+                right: 0;
+                top: 30%;
+                transform: translate(25%, 0);
+                z-index: 1;
+            }
         }
     }
 }
 
 .move-down {
     position: absolute;
-    bottom: -10%;
+    bottom: 0;
     right: 0;
     display: block;
     background: #fafafa;
@@ -241,13 +242,7 @@
                 font-size: 14px;
                 line-height: 150%;
                 color: $black;
-
-                &:hover {
-                    border-bottom: 1px solid $black;
-                }
             }
-
-
         }
     }
 
@@ -270,10 +265,4 @@
     z-index: 1000000;
     background-color: #fafafab4;
     padding-top: 0;
-}
-
-.ourOrders {
-    width: 100vw;
-    height: 100vh;
-    background-color: burlywood;
 }

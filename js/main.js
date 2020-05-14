@@ -19,32 +19,51 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 5000,
         infinite: true,
-        adaptiveHeight: true,
         nextArrow: '<div class="next-pic"><img src="./images/parts/arrow_right.png" alt="Next Picture"></div>',
         prevArrow: '<div class="prev-pic"><img src="./images/parts/arrow_left.png" alt="Previous Picture"></div>',
         responsive: [{
-                breakpoint: 869,
+                breakpoint: 849,
                 settings: {
                     arrows: false,
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    centerMode: true,
-                    centerPadding: "10px",
+                    centerMode: false,
+                    // centerPadding: "10px",
                 }
             },
+            // {
+            //     breakpoint: 719,
+            //     settings: {
+            //         slidesToShow: 1,
+            //         arrows: false,
+            //         centerMode: false,
+            //     }
+            // },
             {
-                breakpoint: 585,
+                breakpoint: 499,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerMode: true,
-                    centerPadding: "0",
+                    centerPadding: '30px',
+                }
+            },
+            {
+                breakpoint: 339,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '10px',
                 }
             }
         ]
     });
 });
+
+// centerPadding: "10px",
 
 //BUSKET 
 

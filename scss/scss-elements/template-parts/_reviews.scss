@@ -1,6 +1,6 @@
 .reviews {
     position: relative;
-    height: 100vh;
+    padding: 40px 0 100px;
 
     .overlay-circle {
         position: absolute;
@@ -24,9 +24,9 @@
     .item {
         cursor: pointer;
         max-width: 370px;
+        width: 100%;
         min-height: 380px;
         height: 100%;
-        width: 100%;
         margin: 0 15px;
         padding: 0 15px;
         display: flex !important;

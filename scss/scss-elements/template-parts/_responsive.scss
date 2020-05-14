@@ -1,0 +1,266 @@
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 1465px) {
+    .header {
+        &-text {
+            max-width: 480px;
+
+            .title {
+                font-size: 72px;
+            }
+
+            .description {
+                font-size: 20px;
+            }
+        }
+
+        .plate__dish {
+            max-width: 520px;
+        }
+    }
+}
+
+@media screen and (max-width:1336px) {
+    .plate__dish {
+        max-width: 290px;
+
+        height: 286px;
+        margin-bottom: 100px;
+
+        .main__plate {
+            max-height: 286px;
+
+            &::before {
+                display: block;
+                width: 489px;
+                height: 461px;
+            }
+
+            &:after {
+                width: 320px;
+                height: 320px;
+            }
+
+            .tomato-first {
+                width: 310px;
+                height: 310px;
+
+                &::before {
+                    width: 54px;
+                    height: 54px;
+                    top: 90%;
+                    right: 40%;
+                    transform: translate(-10%, 0);
+                    font-size: 10px;
+                    line-height: 21px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    right: 0;
+                    bottom: 30%;
+                    transform: translate(50%, 0);
+                }
+            }
+
+            .tomato-second {
+                width: 529px;
+                height: 500px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
+                    right: 0;
+                    top: 30%;
+                    transform: translate(35%, 0);
+                }
+            }
+        }
+    }
+
+    .header-block {
+        justify-content: center;
+    }
+
+    .header-text {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width:998px) {
+    .navbar-profile {
+        display: none;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+
+        &:hover {
+            background-color: $yellow-light;
+        }
+    }
+}
+
+@media screen and (max-width:849px) {
+    .reviews {
+        .item {
+            &-feedback {
+                display: block;
+                max-width: 220px;
+                width: 100%;
+            }
+        }
+    }
+
+    .footer-block {
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-content: center;
+
+        .menu-list {
+            padding: 0 10px;
+        }
+
+        .footer-logo {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width:786px) {
+    .header-text {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-icons {
+        display: none;
+    }
+
+    .right-block {
+        .section-title_right::after {
+            display: none;
+        }
+
+        .item-list {
+            .item-dish:nth-child(2) {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:589px) {
+    .plate__dish {
+        max-width: 240px;
+
+        height: 216px;
+        margin-bottom: 100px;
+
+        .main__plate {
+            max-height: 286px;
+
+            &::before {
+                display: block;
+                width: 249px;
+                height: 241px;
+            }
+
+            &:after {
+                width: 240px;
+                height: 240px;
+            }
+
+            .tomato-first {
+                width: 240px;
+                height: 240px;
+
+                &::before {
+                    width: 54px;
+                    height: 54px;
+                    top: 90%;
+                    right: 40%;
+                    transform: translate(-10%, 0);
+                    font-size: 10px;
+                    line-height: 21px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    right: 0;
+                    bottom: 30%;
+                    transform: translate(50%, 0);
+                }
+            }
+
+            .tomato-second {
+                width: 300px;
+                height: 300px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    left: 0;
+                    top: 30%;
+                    transform: translate(35%, 0);
+                }
+            }
+        }
+    }
+
+    .move-down {
+        width: 44px;
+        height: 50px;
+    }
+
+    .dish {
+        .main-dish {
+            .dish-img {
+                height: 100%;
+
+                .dish-circle {
+                    z-index: 10;
+                }
+            }
+
+            .dish-info {
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .main {
+        padding: 20px;
+
+        .nav-item {
+            .nav-link {
+                font-size: 14px;
+            }
+        }
+
+        span::before {
+            padding-right: 2px;
+        }
+    }
+}
